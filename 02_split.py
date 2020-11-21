@@ -7,9 +7,9 @@ try:
             print(role, end='')
             print(' said ', end='')
             print(line_spoken, end='')
-        except:
+        except ValueError:
             pass
 
     data.close()
-except:
+except IOError:
     print('No se encuentra el archivo con la información a separar')
