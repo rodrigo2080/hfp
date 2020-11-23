@@ -1,8 +1,8 @@
 try:
     data = open('missing.txt')
     print(data.readline(), end='')
-except IOError:
-    print('File Error')
+except IOError as err:
+    print('File Error: ' + str(err))
 finally:
     if 'data' in locals():
         data.close()
